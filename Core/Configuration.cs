@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Configuration;
+using System.IO;
 
 namespace MTNet.Core
 {
@@ -7,7 +9,7 @@ namespace MTNet.Core
     {
         static Configuration()
         {
-            Instance = (Configuration) ConfigurationManager.GetSection("staticContent");
+            Instance = (Configuration) ConfigurationManager.GetSection("mtNet");
         }
 
         public static Configuration Instance { get; private set; }
@@ -15,7 +17,13 @@ namespace MTNet.Core
         [ConfigurationProperty("dataPath", IsRequired = true)]
         public string DataPath
         {
-            get { return (string) this["dataPath"]; }
+            get
+            {
+                // Clean up the path and handle and relative and parent pathing issues
+                var configValue = this["dataPath"].ToString();
+                configValue = configValue.Replace("~", AppDomain.CurrentDomain.BaseDirectory);
+                return new DirectoryInfo(configValue).FullName;
+            }
         }
 
         [ConfigurationProperty("defaultFileName", DefaultValue = "index", IsRequired = false)]
