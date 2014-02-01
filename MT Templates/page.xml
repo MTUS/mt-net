@@ -1,0 +1,12 @@
+<page>
+<id><MTPageID encode_xml="1"></id>
+<url><MTPagePermalink></url>
+<basename><MTPageBasename></basename>
+<title><MTPageTitle encode_xml="1"></title>
+<excerpt><MTPageExcerpt encode_xml="1"></excerpt>
+<body><MTPageBody encode_xml="1"></body>
+<tags><MTPageTags><tag><MTTagName></tag></MTPageTags></tags>
+<createdOn><MTPageDate format="%Y-%m-%d %H:%M:%S"></createdOn>
+<lastModified><MTPageModifiedDate format="%Y-%m-%d %H:%M:%S"></lastModified>
+<allowedRoles><mt:PageCustomFields include="Allowed Roles"><mt:CustomFieldValue></mt:PageCustomFields></allowedRoles>
+</page>

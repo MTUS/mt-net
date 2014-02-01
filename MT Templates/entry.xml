@@ -1,0 +1,11 @@
+<page>
+<id><MTEntryID encode_xml="1"></id>
+<url><MTEntryPermalink></url>
+<basename><MTEntryBasename></basename>
+<title><MTEntryTitle encode_xml="1"></title>
+<excerpt><MTEntryExcerpt encode_xml="1"></excerpt>
+<body><MTEntryBody encode_xml="1"></body>
+<tags><MTEntryTags><tag><MTTagName></tag></MTEntryTags></tags>
+<createdOn><MTEntryDate format="%Y-%m-%d %H:%M:%S"></createdOn>
+<lastModified><MTEntryModifiedDate format="%Y-%m-%d %H:%M:%S"></lastModified>
+</page>

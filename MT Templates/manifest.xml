@@ -1,0 +1,14 @@
+<manifest>
+  <mt:Pages no_folder="1">
+    <content type="page" url="<mt:PagePermalink>"/>
+  </mt:Pages>
+  <mt:TopLevelFolders>
+    <mt:Pages>
+      <content type="page" url="<mt:PagePermalink>"/>
+    </mt:Pages>
+    <mt:SubFolderRecurse>
+  </mt:TopLevelFolders>
+  <mt:Entries>
+    <content type="entry" url="<mt:EntryPermalink>" />
+  </mt:Entries>
+</manifest>
