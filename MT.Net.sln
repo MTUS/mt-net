@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{83B7A4EE-0B83-4052-952A-E85EA9ECCDC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticContent", "StaticContent\StaticContent.csproj", "{5A8EFD09-0562-4994-A928-7824FFAEF207}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Net Core", "Core\MT.Net Core.csproj", "{5A8EFD09-0562-4994-A928-7824FFAEF207}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

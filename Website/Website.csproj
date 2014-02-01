@@ -117,7 +117,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="InMemoryMembershipProvider.cs" />
     <Compile Include="Models\ContentViewModel.cs" />
     <Compile Include="Models\LinkList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,9 +141,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -163,12 +159,6 @@
     <Content Include="Views\Shared\Site.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StaticContent\StaticContent.csproj">
-      <Project>{5a8efd09-0562-4994-a928-7824ffaef207}</Project>
-      <Name>StaticContent</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Content\Entry.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Tag\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\MT.Net Core.csproj">
+      <Project>{5a8efd09-0562-4994-a928-7824ffaef207}</Project>
+      <Name>MT.Net Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

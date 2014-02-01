@@ -6,7 +6,7 @@ namespace Website
     {
         public static void RegisterGlobalUsers()
         {
-            Membership.CreateUser("VIP Customer", "haosfin;WOIENF;oisef");
+            
         }
     }
 }
