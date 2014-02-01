@@ -1,0 +1,59 @@
+﻿@using StaticContent
+@using Website.Models
+@model Website.Models.ContentViewModel
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Content/styles.css" type="text/css" />
+        <title>@Model.CurrentItem.Title</title>
+    </head>
+    <body>
+        <nav id="utility">
+            @if (HttpContext.Current.Request.IsAuthenticated)
+            {
+                @HttpContext.Current.User.Identity.Name
+                @: |
+                @Html.ActionLink("Logout", "Logout", "User")
+                ;
+            }
+            else
+            {
+                @: Anonymous
+                @: |
+                @Html.ActionLink("Login", "Login", "User")
+                ;
+            }
+            |
+            @Html.ActionLink("All", "All", "Content") | 
+            @Html.ActionLink("Refresh", "Refresh", "Content")
+        </nav>
+    
+        <nav id="secondary">
+            @RenderSection("Left", false)
+            &nbsp;
+        </nav>
+    
+        <section id="main">
+
+            <nav id="primary">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    @Html.Partial("LinkList", new LinkList(ContentRepository.GetContentAtLevel(ContentLevel.FirstLevel)) {SuppressOuterTag = true})
+                </ul>
+            </nav>
+
+            <nav id="crumbtrail">
+                @Html.Partial("LinkList", new LinkList(Model.CurrentItem.Ancestors.GetReverse()) {Delimiter = "&raquo;"})
+            </nav>
+
+            <section id="content">
+                <h2>@Model.PageTitle</h2>
+                @RenderBody()
+            </section>
+        
+        </section>
+    </body>
+</html>

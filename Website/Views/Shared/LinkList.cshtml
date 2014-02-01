@@ -1,0 +1,23 @@
+﻿
+@using StaticContent
+@using Website.Models
+@model Website.Models.LinkList
+
+@if (!Model.SuppressOuterTag)
+{
+    @: <ul>
+}
+@foreach (ContentItem contentItem in Model.ContentItems)
+{
+    <li>
+        <a href="@contentItem.Url">@contentItem.Title</a> @Html.Raw(Model.Delimiter)
+        @if (Model.Recursive && contentItem.IsAncestorOf(Model.CurrentItem))
+        {
+            @Html.Partial("LinkList", new LinkList(contentItem.Children) {Recursive = Model.Recursive})
+        }
+    </li>
+}
+@if (!Model.SuppressOuterTag)
+{
+    @: </ul>
+}

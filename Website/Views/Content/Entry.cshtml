@@ -1,0 +1,29 @@
+﻿@using StaticContent
+@model Website.Models.ContentViewModel
+
+<h4>@Model.CurrentItem.CreatedOn</h4>
+@Html.Raw(Model.CurrentItem.Body)
+<h4>
+    Tags
+</h4>
+@for (int i = 0; i < Model.CurrentItem.Tags.Count; i++)
+{
+    var tag = Model.CurrentItem.Tags[i];
+    var last = (i + 1 == Model.CurrentItem.Tags.Count);
+    @: <a href="/tag/@WebUtility.UrlEncode(tag)">@tag</a>
+    if (!last)
+    {
+        @:, 
+    }
+}
+
+@section Left
+{
+    <h4>Latest Blog Posts</h4>
+    <ul>
+        @foreach (ContentItem contentItem in ContentRepository.Content.Where(ci => ci.Type == ContentType.Entry).OrderByDescending(ci => ci.CreatedOn).Take(5))
+        {
+            <li><a href="@contentItem.Path">@contentItem.Title</a></li>
+        }
+    </ul>
+}

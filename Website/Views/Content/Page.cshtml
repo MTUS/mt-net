@@ -1,0 +1,22 @@
+﻿@using StaticContent
+@using Website.Models
+@model Website.Models.ContentViewModel
+
+@Html.Raw(Model.CurrentItem.Body)
+
+@if (!Model.CurrentItem.IsHome)
+{
+    foreach (ContentItem contentItem in Model.CurrentItem.Descendants.Where(ci => ci.Type == ContentType.Entry).OrderByDescending(ci => ci.CreatedOn))
+    {
+        Html.RenderPartial("~/Views/Shared/Entry.cshtml", contentItem);
+    }
+}
+
+@section Left
+{
+    @if (!Model.CurrentItem.IsHome)
+    {
+        <h4>@Model.CurrentItem.GetAncestorAtLevel(ContentLevel.FirstLevel).Title</h4>
+        @Html.Partial("LinkList", new LinkList(Model.CurrentItem.GetAncestorAtLevel(ContentLevel.FirstLevel).Children) {Recursive = true, CurrentItem = Model.CurrentItem})
+    }
+}

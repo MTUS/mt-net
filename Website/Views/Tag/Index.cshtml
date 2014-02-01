@@ -1,0 +1,6 @@
+﻿@model Website.Models.ContentViewModel
+
+@foreach (var contentItem in Model.CurrentList)
+{
+    @Html.Partial("Entry", contentItem)
+}

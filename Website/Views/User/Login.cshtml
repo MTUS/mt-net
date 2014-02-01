@@ -1,0 +1,15 @@
+﻿@model Website.Models.ContentViewModel
+
+<p>
+    Login as:
+</p>
+<form method="post">
+    <select name="role">
+        <option value="VIP Customer">VIP Customer</option>
+    </select>
+    <input type="submit" value="Login"/>
+</form>
+
+<p>
+    @Html.ActionLink("Logout", "Logout")
+</p>

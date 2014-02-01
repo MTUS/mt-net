@@ -1,0 +1,48 @@
+﻿@using StaticContent
+@model Website.Models.ContentViewModel
+
+@{
+    Layout = null;
+}
+
+<p>Content was last indexed @((DateTime.Now - ContentRepository.LastPopulated).Minutes) minutes ago.</p>
+
+<p>@Html.ActionLink("Refresh Now", "Refresh")</p>
+
+<p>
+    The following content is indexed.
+</p>
+
+<table border="1">
+    @foreach (ContentItem contentItem in ContentRepository.Content.OrderBy(ci => ci.Path))
+    {
+        <tr>
+            <td style="padding-left: @(10*contentItem.Depth)px;">
+                <a href="@contentItem.Path">@contentItem.Path</a>
+            </td>
+            <td>@contentItem.Title</td>
+        </tr>
+    }
+</table>
+
+<p>
+    The follow paths were disallowed.
+</p>
+
+<ul>
+    @foreach (string path in Configuration.Instance.DisallowedPaths)
+    {
+        <li>@path</li>
+    }
+</ul>
+
+<p>
+    The following content was disallowed based on path.
+</p>
+
+<ul>
+    @foreach (string path in ContentRepository.DisallowedContent)
+    {
+        <li>@path</li>
+    }
+</ul>
