@@ -1,0 +1,61 @@
+<manifest>
+  
+    <content type="page" url="http://deane.droppages.com/"/>
+  
+  
+    
+      <content type="page" url="http://deane.droppages.com/app/do"/>
+    
+    
+  
+    
+      <content type="page" url="http://deane.droppages.com/news/"/>
+    
+    
+  
+    
+      <content type="page" url="http://deane.droppages.com/help/super-secret-support"/>
+    
+      <content type="page" url="http://deane.droppages.com/help/escalation-path"/>
+    
+      <content type="page" url="http://deane.droppages.com/help/"/>
+    
+    
+    
+      <content type="page" url="http://deane.droppages.com/help/your-first-project/adding-users"/>
+    
+      <content type="page" url="http://deane.droppages.com/help/your-first-project/creating-the-project"/>
+    
+      <content type="page" url="http://deane.droppages.com/help/your-first-project/"/>
+    
+    
+  
+  
+    
+      <content type="page" url="http://deane.droppages.com/subscribe/support"/>
+    
+      <content type="page" url="http://deane.droppages.com/subscribe/plans"/>
+    
+      <content type="page" url="http://deane.droppages.com/subscribe/"/>
+    
+    
+  
+    
+      <content type="page" url="http://deane.droppages.com/about/deane"/>
+    
+      <content type="page" url="http://deane.droppages.com/about/people"/>
+    
+      <content type="page" url="http://deane.droppages.com/about/contact-us"/>
+    
+      <content type="page" url="http://deane.droppages.com/about/"/>
+    
+    
+  
+  
+    <content type="entry" url="http://deane.droppages.com/news/2013/12/blog_post_3" />
+  
+    <content type="entry" url="http://deane.droppages.com/news/2013/12/blog_post_2" />
+  
+    <content type="entry" url="http://deane.droppages.com/news/2013/12/deane-saves-the-world" />
+  
+</manifest>

@@ -1,0 +1,12 @@
+<page>
+<id>40</id>
+<url>http://deane.droppages.com/news/</url>
+<basename>index</basename>
+<title>News</title>
+<excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet consectetur tortor, nec pulvinar dui tincidunt a. Vivamus ut nisl tortor. Donec bibendum dolor tincidunt, pretium erat a, blandit augue. Vestibulum sit amet lectus lacus. Morbi arcu elit, viverra non...</excerpt>
+<body><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet consectetur tortor, nec pulvinar dui tincidunt a. Vivamus ut nisl tortor. Donec bibendum dolor tincidunt, pretium erat a, blandit augue. Vestibulum sit amet lectus lacus. Morbi arcu elit, viverra non nunc nec, fringilla cursus lorem. Duis quis adipiscing nunc. Aenean volutpat, urna ac faucibus pretium, nibh risus interdum felis, et commodo sem arcu eget nunc. Mauris enim diam, consectetur a rutrum sed, viverra eu magna. Nam est odio, eleifend nec vehicula eget, luctus ac quam. Aenean lacinia, eros eu aliquam dignissim, diam ligula ultrices ipsum, eget sagittis arcu sapien in ligula. Curabitur vel sem vel dui iaculis tempus vel et ante. Cras porttitor risus risus, et auctor urna aliquam non. Quisque vel ullamcorper tortor. Duis scelerisque ullamcorper gravida. Ut hendrerit orci nec magna porta ornare.</p>]]></body>
+<tags></tags>
+<createdOn>2013-12-20 17:45:04</createdOn>
+<lastModified>2013-12-20 17:45:30</lastModified>
+<allowedRoles></allowedRoles>
+</page>
