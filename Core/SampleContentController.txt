@@ -1,0 +1,19 @@
+﻿using System.Web.Mvc;
+using MTNet.Core;
+
+namespace MTNet.Core.Samples
+{
+    public class SampleContentController : Controller
+    {
+        private ContentItem InboundContentItem
+        {
+            get { return (ContentItem) System.Web.HttpContext.Current.Items["ContentItem"]; }
+        }
+
+        public ActionResult Display(string path)
+        {
+            ViewBag.Content = InboundContentItem;
+            return View();
+        }
+    }
+}

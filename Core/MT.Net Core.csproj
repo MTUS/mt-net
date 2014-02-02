@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Content Include="SampleContentController.txt" />
     <Compile Include="ContentItem.cs" />
     <Compile Include="ContentLevel.cs" />
     <Compile Include="ContentList.cs" />
