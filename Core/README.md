@@ -26,7 +26,7 @@ Note that a bare bones sample content controller is included in the Core library
 Classes
 -------
 
-* **ContentFilter:** An HTTP module which binds to the BeginRequest event. It request matching content from the ContentRepository, and if such content exists, it stores the ContentItem in the current HttpContext and rewrites the path to the content controller.
+* **ContentFilter:** An HTTP module which binds to the BeginRequest event. For each inbound request, it requests matching content from the ContentRepository, and if such content exists, it stores the ContentItem in the current HttpContext and rewrites the path to the content controller.
 
 * **Configuration:** Parses the "mtNet" section of the web.config.
 
@@ -34,14 +34,14 @@ Classes
 
 * **ContentList:** A list of ContentItems. This class is provided to filter unpublished and private content from content collections.
 
-* **ContentRepository:** The main repository for content. Parses the data files and turns them into ContentItems, indexes them by path, then provides querying facilities  to return specific content and content lists.
+* **ContentRepository:** The main repository for content. Parses data files, turns them into ContentItems, indexes them by path, then provides querying facilities  to return specific content and content lists.
 
 Configuration
 -------------
 
-* **dataPath:** Location to the directory of data files. Required.
+* **dataPath:** Location to the directory of data files. Required.  This can be absolute, or prefixed with a tilde which will make it relative from the base directory of the AppDomain (which, for a website, is the web root).
 
-* **defaultFileName:** The directory default filename that should be removed from paths (defaults to "index.html").
+* **defaultFileName:** The directory default filename that should be removed from paths (defaults to "index.html"). This ensures that content in default files will be indexed under the correct path.
 
 * **manifestFilename:** The name of the core data file (defaults to "manifest.xml").
 
@@ -49,4 +49,4 @@ Configuration
 
 * **controllerActionName:** The name of the action on on the above controller (defaults to "display").
 
-* **disallowedPaths:** A comma-delimited list of paths for which content should be ignored. Use this protect paths to which your application needs to respond. Example, "/content".  Defaults to blank.
+* **disallowedPaths:** A comma-delimited list of paths for which content should be ignored. The content repository will not index content for paths that begin with htese values. Use this protect paths to which your application needs to respond. Example, "/content".  Defaults to blank.
