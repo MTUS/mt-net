@@ -2,3 +2,6 @@ Core/bin/
 Website/obj/
 Core/obj/
 Sample Website/obj/Debug/Sample Website.csproj.FileListAbsolute.txt
+Sample Website/bin/MT.Net.Core.dll
+Sample Website/obj/Debug/Website.dll
+Sample Website/bin/Website.dll
