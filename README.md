@@ -7,7 +7,7 @@ The project is divided up into four parts:
 
 Core
 ----
-The core libraries that make up MT.Net.  The core project generates a DLL that gets referenced by the implementing website.
+The core libraries that make up MT.Net.  The core project generates a DLL that gets referenced by the implementing website.  See [MT Core doc](https://github.com/MTUS/mt-net/tree/master/Core).
 
 Sample Website
 --------------
